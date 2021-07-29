@@ -22,6 +22,10 @@
     position: relative;
 }
 
+.header__navbar-user {
+    
+}
+
 .header__navbar-item,
 .header__navbar-item-link,
 .header__navbar-icon-link {
