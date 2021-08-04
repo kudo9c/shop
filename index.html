@@ -248,7 +248,7 @@
 
         <div class="container">           
             <div class="grid">
-                <div class="grid__row">
+                <div class="grid__row app__content">
                     <div class="grid__column-2">
                         <nav class="category">
                             <h3 class="category__heading">
@@ -257,19 +257,51 @@
                             </h3>
                             <ul class="category-list">
                                 <li class="category-item category-item--active">
-                                    <a href="#" class="category-item__link">Best Seller</a>
+                                    <a href="#" class="category-item__link">Low Top</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item__link">Limited Edition</a>
+                                    <a href="#" class="category-item__link">High Top</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item__link">Sale off</a>
+                                    <a href="#" class="category-item__link">Slip-on</a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
                     <div class="grid__column-10">
-                        
+                        <div class="home-filter">
+                            <span class="home-filter__label">Sắp xếp theo</span>
+                            <button class="home-filter__btn btn">Phổ biến</button>
+                            <button class="home-filter__btn btn btn--primary">Mới nhất</button>
+                            <button class="home-filter__btn btn">Bán chạy</button>
+                            <div class="select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="fas fa-angle-down select-input__icon"></i>
+                                <!-- Price options -->
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: Thấp đến Cao</a>
+                                        
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: Cao đến Thấp</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="home-filer__page">
+                                <span class="home-filer__page-num">
+                                    <span class="home-filer__page-current">1</span>/14
+                                </span>
+                                <div class="home-filer__page-control">
+                                    <a href="" class="home-filer__page-btn home-filer__page-btn--disabled">
+                                        <i class="fas fa-angle-left home-filer__page-icon"></i>
+                                    </a>
+                                    <a href="" class="home-filer__page-btn ">
+                                        <i class="home-filer__page-icon fas fa-angle-right "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

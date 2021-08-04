@@ -782,6 +782,10 @@
     background-color: #F5f5f5;
 }
 
+.app__content {
+    padding-top: 36px;
+}
+
 .category {
     border-radius: 2px;
     background-color: var(--white-color);
@@ -792,6 +796,7 @@
     font-size: 1.8rem;
     padding: 12px 16px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 0;
 }
 
 .category__heading-icon {
@@ -829,7 +834,7 @@
     display: block;
     position: relative;
     right: 0;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--text-color);
     text-decoration: none;
     padding: 4px 16px;
@@ -839,4 +844,76 @@
 .category-item__link:hover {
     right: -4px;
     color: var(--primary-color);
+}
+/* Home filter */
+.home-filter {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    padding: 12px 22px;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.home-filter__label {
+    font-size: 1.4rem;
+    color: #555;
+    margin-right: 16px;
+}
+
+.home-filter__btn {
+    min-width: 90px;
+    margin-right: 12px;
+}
+
+.home-filer__page {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    
+}
+
+.home-filer__page-num {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-right: 22px;
+}
+
+.home-filer__page-current {
+    color: var(--primary-color);
+}
+
+.home-filer__page-control {
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    width: 72px;
+    height: 36px;
+}
+
+.home-filer__page-btn {
+    flex: 1;
+    display: flex;
+    background-color: var(--white-color);
+    text-decoration: none;
+}
+
+.home-filer__page-btn--disabled  {
+    background-color: #f9f9f9;
+    cursor: default;
+
+}
+
+.home-filer__page-btn--disabled .home-filer__page-icon {
+    color: #ccc;
+}
+
+.home-filer__page-btn:first-child {
+    border-right: 1px solid #EEE;
+}
+
+.home-filer__page-icon {
+    margin: auto;
+    font-size: 1.4rem;
+    color: #555;
 }
