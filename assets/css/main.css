@@ -920,14 +920,29 @@
 }
 
 /* Product */
+.home-product {
+    margin-bottom: 10px;
+}
+
 .home-product-item {
+    display: block;
     margin-top: 10px;
     position: relative;
+    text-decoration: none;
     background-color: var(--white-color);
+    border-bottom-right-radius: 2px ;
+    border-bottom-left-radius: 2px ;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    transition: transform linear 0.1s;
+    will-change: transform;
+}
+
+.home-product-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 .home-product-item__img {
-    background-image: url(/assets/img/pro_A61105_2.jpg);
     background-position:  top center ;
     background-repeat: no-repeat;
     background-size: cover;
