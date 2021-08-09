@@ -1210,3 +1210,16 @@
     text-decoration: none;
     color: transparent;
 }
+
+.footer_bottom {
+   background-color: #F5f5f5;
+   margin-top: 130px;
+   margin-bottom: 0;
+}
+
+.footer__text {
+    margin: auto;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #737373;
+}
