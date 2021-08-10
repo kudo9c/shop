@@ -1223,3 +1223,11 @@
     font-size: 1.4rem;
     color: #737373;
 }
+/* Product Detail */
+.heading_product {
+    
+    margin: 40px 0;
+    font-size: 1.4rem;
+    border-bottom: 2.5px solid var(--black-color);
+    width: 100%;
+}
