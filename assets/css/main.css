@@ -543,17 +543,16 @@
 .header__cart-list-item {
     padding-left: 0;
     list-style: none;
-    height: 50vh;
+    max-height: 50vh;
     overflow-y: auto;
 }
 
-.header__cart-item {
-    width: 500px;
-}
+
 
 .header__cart-item {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .header__cart-item:hover {
