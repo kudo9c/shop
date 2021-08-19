@@ -417,6 +417,110 @@
     margin: 0 8px;
 }
 
+/* Header Search Mobile & Tablet*/
+.nav-bars-btn {
+    display: none;
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
+
+.nav__mobile-tablet-close {
+    font-size: 3rem;
+    color: #666;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.nav__mobile-tablet {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: var(--white-color);
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: tranform linear 0.5s, opacity linear 0.2s;
+}
+
+.header__navbar-mobile-tablet-info {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #666;
+}
+
+.header__navbar-mobile-tablet-user-img {
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 16px;
+}
+
+.header__navbar-mobile-tablet-user-name {
+    margin-left: 24px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.header__navbar-mobile-tablet-user-menu {
+    list-style: none;
+    padding-left: 12px;
+}
+
+.header__navbar-mobile-tablet-user-item {
+    display: flex;
+    align-items: center;
+}
+
+.header__navbar-mobile-tablet-user-item:focus {
+    background-color: #666;
+}
+
+.header__navbar-mobile-tablet-user-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    display: block;
+    margin: 15px 12px;
+}
+
+.header__navbar-mobile-tablet-user-icon {
+    font-size: 1.6rem;
+    margin-right: 4px;
+}
+
+.nav__input:checked ~ .nav__overlay {
+    display: block;
+}
+
+.nav__input:checked ~ .nav__mobile-tablet {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+
+
+.nav-bars-btn-icon {
+    font-size: 2.6rem;
+    color: var(--white-color);
+    display: none;
+}
+
 .header__mobile-search {
     padding: 0 12px;
     display: none;
@@ -432,6 +536,7 @@
 
 .header__logo {
     width: 200px;
+
 }
 
 .header__logo-img {
@@ -565,6 +670,19 @@
     max-height: 50vh;
     overflow-y: auto;
 }
+
+.cart__mobile-tablet-close {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    font-size: 1.8rem;
+}
+
+/* .cart__input:checked ~ .header__cart-list {
+    display: block;
+} */
+
+
 /* Header sort bar */
 .header__sort-bar {
     position: fixed;

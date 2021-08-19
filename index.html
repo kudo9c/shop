@@ -18,7 +18,7 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid wide">
+            <div class="grid wide grid-on-mobile-tablet">
                 <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar--qr header__navbar-item--separate">
@@ -112,6 +112,38 @@
                     </ul>
                 </nav>
                 <div class="header-search">
+                    <label for="mobile-navbar-checkbox" class="nav-bars-btn">
+                        <i class="nav-bars-btn-icon fas fa-bars"></i>                    
+                    </label>
+                    <input type="checkbox" hidden id="mobile-navbar-checkbox" class="nav__input">
+                    <label for="mobile-navbar-checkbox" class="nav__overlay"></label>
+                    <div class="nav__mobile-tablet">
+                        <label for="mobile-navbar-checkbox" class="nav__mobile-tablet-close">
+                            <i class="nav__mobile-tablet-close-icon fas fa-times"></i>
+                        </label>
+                        <div class="header__navbar-mobile-tablet-info">
+                            <img src="./assets/img/avatar.jpeg" alt="" class="header__navbar-mobile-tablet-user-img">
+                            <span class="header__navbar-mobile-tablet-user-name">Trần Quốc Trường</span>
+                        </div>
+                        <ul class="header__navbar-mobile-tablet-user-menu">
+                            <li class="header__navbar-mobile-tablet-user-item">
+                                <i class="header__navbar-mobile-tablet-user-icon fas fa-user-alt"></i>
+                                <a href="" class="header__navbar-mobile-tablet-user-link">Tài khoản của tôi</a>
+                            </li>
+                            <li class="header__navbar-mobile-tablet-user-item">
+                                <i class="header__navbar-mobile-tablet-user-icon fas fa-map-marker-alt"></i>
+                                <a href="" class="header__navbar-mobile-tablet-user-link">Địa chỉ của tôi</a>
+                            </li>
+                            <li class="header__navbar-mobile-tablet-user-item">
+                                <i class="header__navbar-mobile-tablet-user-icon fas fa-edit"></i>
+                                <a href="" class="header__navbar-mobile-tablet-user-link">Đơn mua</a>
+                            </li>
+                            <li class="header__navbar-mobile-tablet-user-item header__navbar-mobile-tablet-user-item--separate">
+                                <i class="header__navbar-mobile-tablet-user-icon fas fa-sign-out-alt"></i>
+                                <a href="" class="header__navbar-mobile-tablet-user-link">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
                     <label for="mobile-search-checkbox" class="header__mobile-search hide-on-tablet">
                         <i class="header__mobile-search-icon fas fa-search"></i>
                     </label>
@@ -164,10 +196,17 @@
                     </div>                    
                     <div class="header__cart">
                         <div class="header__cart-wrap">
-                            <i class="header__cart-icon fas fa-shopping-cart"></i>
-                            <span class="header__cart-notice">3</span>
+                            <label for="mobile-tablet-cart-checkbox">
+                                <i class="header__cart-icon fas fa-shopping-cart"></i>
+                                <span class="header__cart-notice">3</span>
+                            </label>
+                            
+                                                      
                             <!-- No cart: header__cart-list--no-cart -->
-                            <div class="header__cart-list ">                        
+                            <div class="header__cart-list "> 
+                                <label for="mobile-tablet-cart-checkbox" class="cart__mobile-tablet-close">
+                                    <i class="cart__mobile-tablet-close-icon fas fa-times"></i>
+                                </label>
                                 <img src="./assets/img/no_cart.jpg" alt="" class="header__cart-no-cart-img">
                                 <p class="header__cart-list--no-cart-message">
                                     Chưa có sản phẩm
@@ -247,6 +286,7 @@
                                 </ul>
                                 <a href="#" class="header__cart-view btn btn--primary">Xem giỏ hàng</a>
                             </div>
+                            <input type="checkbox" hidden  id="mobile-tablet-cart-checkbox" class="cart__input"> 
                         </div>
                     </div>
                 </div>
