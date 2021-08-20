@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/product-detail.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -16,8 +19,8 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide grid-on-mobile-tablet">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar--qr header__navbar-item--separate">
                             Vào cửa hàng trên ứng dụng 
@@ -110,7 +113,42 @@
                     </ul>
                 </nav>
                 <div class="header-search">
-                    <div class="header__logo">
+                    <label for="mobile-navbar-checkbox" class="nav-bars-btn">
+                        <i class="nav-bars-btn-icon fas fa-bars"></i>                    
+                    </label>
+                    <input type="checkbox" hidden id="mobile-navbar-checkbox" class="nav__input">
+                    <label for="mobile-navbar-checkbox" class="nav__overlay"></label>
+                    <div class="nav__mobile-tablet">
+                        <label for="mobile-navbar-checkbox" class="nav__mobile-tablet-close">
+                            <i class="nav__mobile-tablet-close-icon fas fa-times"></i>
+                        </label>
+                        <div class="header__navbar-mobile-tablet-info">
+                            <img src="./assets/img/avatar.jpeg" alt="" class="header__navbar-mobile-tablet-user-img">
+                            <span class="header__navbar-mobile-tablet-user-name">Trần Quốc Trường</span>
+                        </div>
+                        <ul class="header__navbar-mobile-tablet-user-menu">
+                            <li class="header__navbar-mobile-tablet-user-item">
+                                <i class="header__navbar-mobile-tablet-user-icon fas fa-user-alt"></i>
+                                <a href="" class="header__navbar-mobile-tablet-user-link">Tài khoản của tôi</a>
+                            </li>
+                            <li class="header__navbar-mobile-tablet-user-item">
+                                <i class="header__navbar-mobile-tablet-user-icon fas fa-map-marker-alt"></i>
+                                <a href="" class="header__navbar-mobile-tablet-user-link">Địa chỉ của tôi</a>
+                            </li>
+                            <li class="header__navbar-mobile-tablet-user-item">
+                                <i class="header__navbar-mobile-tablet-user-icon fas fa-edit"></i>
+                                <a href="" class="header__navbar-mobile-tablet-user-link">Đơn mua</a>
+                            </li>
+                            <li class="header__navbar-mobile-tablet-user-item header__navbar-mobile-tablet-user-item--separate">
+                                <i class="header__navbar-mobile-tablet-user-icon fas fa-sign-out-alt"></i>
+                                <a href="" class="header__navbar-mobile-tablet-user-link">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <label for="mobile-search-checkbox" class="header__mobile-search hide-on-tablet">
+                        <i class="header__mobile-search-icon fas fa-search"></i>
+                    </label>
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -122,14 +160,16 @@
                             </svg> 
                         </a>                      
                     </div>
-                    <div class="header__search">
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+
+                    <div class="header__search ">
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm">
                             <div class="header__search-history">
                                 <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
                                 <ul class="header__search-history-list">
                                     <li class="header__search-history-item">
-                                        <a href="">Kem dưỡng da</a>
+                                        <a href="">Giày</a>
                                     </li>
                                     <li class="header__search-history-item">
                                         <a href="">Kem trị mụn</a>
@@ -157,10 +197,17 @@
                     </div>                    
                     <div class="header__cart">
                         <div class="header__cart-wrap">
-                            <i class="header__cart-icon fas fa-shopping-cart"></i>
-                            <span class="header__cart-notice">3</span>
+                            <label for="mobile-tablet-cart-checkbox">
+                                <i class="header__cart-icon fas fa-shopping-cart"></i>
+                                <span class="header__cart-notice">3</span>
+                            </label>
+                            
+                                                      
                             <!-- No cart: header__cart-list--no-cart -->
-                            <div class="header__cart-list ">                        
+                            <div class="header__cart-list "> 
+                                <label for="mobile-tablet-cart-checkbox" class="cart__mobile-tablet-close">
+                                    <i class="cart__mobile-tablet-close-icon fas fa-times"></i>
+                                </label>
                                 <img src="./assets/img/no_cart.jpg" alt="" class="header__cart-no-cart-img">
                                 <p class="header__cart-list--no-cart-message">
                                     Chưa có sản phẩm
@@ -240,27 +287,122 @@
                                 </ul>
                                 <a href="#" class="header__cart-view btn btn--primary">Xem giỏ hàng</a>
                             </div>
+                            <input type="checkbox" hidden  id="mobile-tablet-cart-checkbox" class="cart__input"> 
                         </div>
                     </div>
                 </div>
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
         </header>
-        <div class="container">
-            <div class="grid">
-                <div class="grid__row app__content">
-                
-                        <h3 class="heading_product">Track 6 Unnamed No.1 In C Minor - Low Top</h3>
+        <div class="container app__content">
+            <div class="grid wide">
+                <div class="nav-product">
+                    <a href="./index.html">Trang chủ ></a>
+                    <span>Vintas Temperate - Low Top</span>
                 </div>
-               
+                <div class="row product-detail">                    
+                    <div class="col l-6">
+                        <div class="img-slide">
+                            <div class="slider-view">
+                                <input type="radio" name="btn" hidden id="r1" class="img-input">
+                                <input type="radio" name="btn" hidden id="r2" class="img-input">
+                                <input type="radio" name="btn" hidden id="r3" class="img-input">
+                                <input type="radio" name="btn" hidden id="r4" class="img-input">
+                                <input type="radio" name="btn" hidden id="r5" class="img-input">
+
+                                <div class="slider">
+                                    <img src="./assets/img/pro_A61110_1.jpg" alt="" class="product-image img1">
+                                    <img src="./assets/img/pro_A61110_2.jpg" alt="" class="product-image img2">
+                                    <img src="./assets/img/pro_A61110_3.jpg" alt="" class="product-image img3">
+                                    <img src="./assets/img/pro_A61110_4.jpg" alt="" class="product-image img4">
+                                    <img src="./assets/img/pro_A61110_5.jpg" alt="" class="product-image img5">
+                                </div>
+                                <div class="slider-btns">
+                                    <label for="r1" class="slide-btn"></label>
+                                    <label for="r2" class="slide-btn"></label>
+                                    <label for="r3" class="slide-btn"></label>
+                                    <label for="r4" class="slide-btn"></label>
+                                    <label for="r5" class="slide-btn"></label>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="col l-6">
+                        <div class="product-info">
+                            <h5 class="product-name">VINTAS TEMPERATE - LOW TOP - DUSTY OLIVE</h5>
+                            <span class="product-id">Mã sản phẩm: A61110</span>
+                            <h2 class="product-price">720.000 VND</h2>
+                            <h2 class="product-descr">Má ngoài Suede (da lộn), má trong phủ vải canvas kèm theo các chi tiết phối trộn chất da Nappa nâu trầm điềm đạm là ý đồ sắp xếp làm nên Vintas Temperate Pack. Với tông màu cảm hứng từ cỏ cây cùng khí hậu dịu mát rõ nét của vùng Ôn Đới. Điểm chốt hạ thuyết phục cho những con người sâu sắc, mang tâm hồn yêu thiên nhiên vô bờ bến.</h2>
+                            <span class="product-size">SIZE</span>
+                            <ul class="product-size-list">
+                                <li class="product-size-items" >
+                                    <button type="button" disabled class="product-size-item product-size-item--sold-out ">35</button> 
+                                </li>
+                                <li class="product-size-items" >
+                                    <button  class="product-size-item">36</button>                                   
+                                </li>
+                                <li class="product-size-items" >
+                                    <button class="product-size-item">37</button>
+                                </li>
+                                <li class="product-size-items" >
+                                    <button class="product-size-item">38</button>
+                                </li>
+                                <li class="product-size-items" >
+                                    <button type="button" disabled class="product-size-item product-size-item--sold-out  ">39</button>
+                                </li>
+                                <li class="product-size-items" >
+                                    <button class="product-size-item">40</button>
+                                </li>
+                                <li class="product-size-items" >
+                                    <button class="product-size-item">41</button>
+                                </li>
+                                <li class="product-size-items" >
+                                    <button class="product-size-item">42</button>
+                                </li>
+                                <li class="product-size-items" >
+                                    <button type="button" disabled class="product-size-item product-size-item--sold-out">43</button>
+                                </li>
+                                <li class="product-size-items" >
+                                    <button type="button" disabled class="product-size-item product-size-item--sold-out">44</button>
+                                </li>
+                                <li class="product-size-items" >
+                                    <button class="product-size-item">45</button>
+                                </li>
+                                <li class="product-size-items" >
+                                    <button class="product-size-item">46</button>
+                                </li>
+                            </ul>
+                            <div class="product-quantity-wrap">
+                                <label for="product-quantity-id" class="product-quantity-name">SỐ LƯỢNG</label>
+                                <input min="0" type="number" name="" id="product-quantity-id" class="product-quantity">
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </div>
         <footer class="footer">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__column-2-4">
+            <div class="grid wide footer__content">
+                <div class="row">
+                    <div class="col l-2-4 m-4 c-6 ">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer_list">
-                            <li class="footer_list-item">
+                            <li class="product-size-items" class="footer_list-item">
                                 <a href="" class="footer_list-item-link">Trung Tâm Trợ Giúp</a>
                             </li>
                             <li class="footer_list-item">
@@ -271,7 +413,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6 ">
                         <h3 class="footer__heading">Giới thiệu</h3>
                         <ul class="footer_list">
                             <li class="footer_list-item">
@@ -285,7 +427,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6 ">
                         <h3 class="footer__heading">Danh mục</h3>
                         <ul class="footer_list">
                             <li class="footer_list-item">
@@ -299,7 +441,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6 ">
                         <h3 class="footer__heading">Theo dõi</h3>
                         <ul class="footer_list">
                             <li class="footer_list-item">
@@ -322,13 +464,16 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-8 c-12 ">
                         <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                         <div class="footer__download">
                             <img src="/assets/img/qr_code.png" alt="Download QR" class="footer__download-qr-img">
                             <div class="footer__download-app">
                                 <a href="" class="footer__download-app-link">
                                     <img src="/assets/img/googleplay.png" alt="googleplay" class="footer__download-app-img">
+                                    
+                                </a>
+                                <a href="" class="footer__download-app-link">
                                     <img src="/assets/img/app_store.png" alt="app_store" class="footer__download-app-img">
                                 </a>
                                 
@@ -338,8 +483,8 @@
                 </div>
             </div>
             <div class="footer_bottom">
-                <div class="grid">
-                    <div class="grid__row ">
+                <div class="grid wide">
+                    <div class="row ">
                         <p class="footer__text">2021 - Trần Quốc Trường 20185488</p>
                     </div>
                 </div>
