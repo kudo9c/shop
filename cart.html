@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/product-detail.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -307,124 +308,86 @@
                 </li>
             </ul>
         </header>
-        <div class="container app__content">
+        <div class="container cart__content">
             <div class="grid wide">
-                <div class="nav-product">
-                    <a href="./index.html">Trang chủ ></a>
-                    <span>Vintas Temperate - Low Top</span>
-                </div>
-                <div class="row product-detail">                    
-                    <div class="col l-6">
-                        <div class="img-slide">
-                            <div class="slider-view">
-                                <input type="radio" name="btn" hidden id="r1" class="img-input">
-                                <input type="radio" name="btn" hidden id="r2" class="img-input">
-                                <input type="radio" name="btn" hidden id="r3" class="img-input">
-                                <input type="radio" name="btn" hidden id="r4" class="img-input">
-                                <input type="radio" name="btn" hidden id="r5" class="img-input">
-                                
-                                <div class="slider">
-                                    <img src="./assets/img/pro_A61110_1.jpg" alt="" class="product-image img1">
-                                    <img src="./assets/img/pro_A61110_2.jpg" alt="" class="product-image img2">
-                                    <img src="./assets/img/pro_A61110_3.jpg" alt="" class="product-image img3">
-                                    <img src="./assets/img/pro_A61110_4.jpg" alt="" class="product-image img4">
-                                    <img src="./assets/img/pro_A61110_5.jpg" alt="" class="product-image img5">
-                                    
+                <div class="row cart-product-list">
+                    <div class="col l-8">
+                            <h3 class="cart-header">GIỎ HÀNG</h3>
+                            <div class="cart-product-wrap">
+                                <img src="./assets/img/pro_A61110_1.jpg" alt="" class="cart-product__img">
+                                <div class="cart-product-detail">
+                                    <span class="cart-product__name">Vintas Temperate - Low Top</span>
+                                    <span class="cart-product__price">720.000 VND</span>
+                                    <div class="cart-product__description">
+                                        <span class="cart-product__size">Size: 38</span>
+                                        <span class="cart-product__quantity">Số lượng: 1</span>
+                                    </div>
+                                    <a href="" class="btn cart-product__del-icon">
+                                        <i class="delete-product-item-icon far fa-trash-alt"></i>
+                                    </a>
                                 </div>
-                                
-                                <div class="slider-btns">
-                                    <label for="r1" class="slide-btn"></label>
-                                    <label for="r2" class="slide-btn"></label>
-                                    <label for="r3" class="slide-btn"></label>
-                                    <label for="r4" class="slide-btn"></label>
-                                    <label for="r5" class="slide-btn"></label>
-                                </div>
-                            </div>                            
-                        </div>
+                            </div>                      
                     </div>
-                    <div class="col l-6">
-                        <div class="product-info">
-                            <h5 class="product-name">VINTAS TEMPERATE - LOW TOP - DUSTY OLIVE</h5>
-                            <span class="product-id">Mã sản phẩm: A61110</span>
-                            <h2 class="product-price">720.000 VND</h2>
-                            <h2 class="product-descr">Má ngoài Suede (da lộn), má trong phủ vải canvas kèm theo các chi tiết phối trộn chất da Nappa nâu trầm điềm đạm là ý đồ sắp xếp làm nên Vintas Temperate Pack. Với tông màu cảm hứng từ cỏ cây cùng khí hậu dịu mát rõ nét của vùng Ôn Đới. Điểm chốt hạ thuyết phục cho những con người sâu sắc, mang tâm hồn yêu thiên nhiên vô bờ bến.</h2>
-                            <span class="product-size">SIZE</span>
-                            <ul class="product-size-list">
-                               
-                                <li class="product-size-items" >
-                                    <button type="button" disabled class="product-size-item product-size-item--sold-out ">35</button> 
-                                </li>
-                                <li class="product-size-items" >
-                                    <button  class="product-size-item">36</button>                                   
-                                </li>
-                                <li class="product-size-items" >
-                                    <button class="product-size-item">37</button>
-                                </li>
-                                <li class="product-size-items" >
-                                    <button class="product-size-item">38</button>
-                                </li>
-                                <li class="product-size-items" >
-                                    <button type="button" disabled class="product-size-item product-size-item--sold-out  ">39</button>
-                                </li>
-                                <li class="product-size-items" >
-                                    <button class="product-size-item">40</button>
-                                </li>
-                                <li class="product-size-items" >
-                                    <button class="product-size-item">41</button>
-                                </li>
-                                <li class="product-size-items" >
-                                    <button class="product-size-item">42</button>
-                                </li>
-                                <li class="product-size-items" >
-                                    <button type="button" disabled class="product-size-item product-size-item--sold-out">43</button>
-                                </li>
-                                <li class="product-size-items" >
-                                    <button type="button" disabled class="product-size-item product-size-item--sold-out">44</button>
-                                </li>
-                                <li class="product-size-items" >
-                                    <button class="product-size-item">45</button>
-                                </li>
-                                <li class="product-size-items" >
-                                    <button class="product-size-item">46</button>
-                                </li>
-                            </ul>
-                            <div class="product-quantity-wrap">
-                                <label for="product-quantity-id" class="product-quantity-name">SỐ LƯỢNG</label>
-                                <input min="1" type="number" name="" id="product-quantity-id" class="product-quantity">
-                            </div>
-                            <div class="product-action">
-                                <a href="" class="product-add-to-cart">
-                                    <i class="fas fa-cart-plus product-cart-add-icon"></i>
-                                    Thêm vào giỏ hàng
+                    <div class="col l-4">
+                        <h3 class="order__header">ĐƠN HÀNG</h3>
+                        <span class="order__sale-code">NHẬP MÃ KHUYẾN MÃI</span>
+                        <div class="order__sale-code-wrap">
+                            <input type="text" name="" id="" class="order__sale-code-input">
+                            <a href="" class="btn btn--primary">ÁP DỤNG</a>
+                        </div>
+                        <div class="order__price-wrap">
+                            <span class="order__price-header">Đơn hàng</span>
+                            <span class="order__price">2.300.000 VND</span>
+                        </div>
+                        <div class="order__price-wrap">
+                            <span class="order__price-header">Giảm</span>
+                            <span class="order__price">0 VND</span>
+                        </div>
+                        <div class="order__price-sum-wrap">
+                            <span class="order__price-sum-header">TỔNG</span>
+                            <span class="order__price-sum-price">2.300.000 VND</span>
+                        </div>
+                        <a href="" class="btn btn--primary btn-order__pay">TIẾP TỤC THANH TOÁN</a>
+                    </div>
+                    <div class="col l-8">
+                        <div class="cart-product-wrap">
+                            <img src="./assets/img/giohang2.jpg" alt="" class="cart-product__img">
+                            <div class="cart-product-detail">
+                                <span class="cart-product__name">Basas Simple Life NE - Low Top</span>
+                                <span class="cart-product__price">490.000 VND</span>
+                                <div class="cart-product__description">
+                                    <span class="cart-product__size">Size: 38</span>
+                                    <span class="cart-product__quantity">Số lượng: 1</span>
+                                </div>
+                                <a href="" class="btn cart-product__del-icon">
+                                    <i class="delete-product-item-icon far fa-trash-alt"></i>
                                 </a>
-                                <a href="" class="product-pay">Mua ngay</a>
-                            </div>       
-                        </div>
-                        
+                            </div>
+                        </div>                      
                     </div>
+                    <div class="col l-8">
+                        <div class="cart-product-wrap">
+                            <img src="./assets/img/giohang1.jpg" alt="" class="cart-product__img">
+                            <div class="cart-product-detail">
+                                <span class="cart-product__name">Track 6 Unnamed No.1 In C Minor - Low Top</span>
+                                <span class="cart-product__price">1.090.000 VND</span>
+                                <div class="cart-product__description">
+                                    <span class="cart-product__size">Size: 38</span>
+                                    <span class="cart-product__quantity">Số lượng: 1</span>
+                                </div>
+                                <a href="" class="btn cart-product__del-icon">
+                                    <i class="delete-product-item-icon far fa-trash-alt"></i>
+                                </a>
+                            </div>
+                        </div>                      
+                    </div>
+                    <div class="col l-8 cart-action-wrap">
+                            <a href="" class="btn cart-action-btn ">XÓA HẾT</a>
+                            <a href="./index.html" class="btn cart-action-btn">QUAY LẠI MUA HÀNG</a>
+                    </div>
+                </div>
+                
 
-                </div>
-                <div class="product-description">
-                    <h3 class="product-description__name">THÔNG TIN SẢN PHẨM </h3>
-                    <ul class="product-description__list">
-                        <li class="product-description__item">Gender: Unisex</li>
-                        <li class="product-description__item">Size run: 35 – 46</li>
-                        <li class="product-description__item">Upper: Canvas/Suede/Leather</li>
-                        <li class="product-description__item">Outsole: Rubber</li>
-                    </ul>
-                    <img src="./assets/img/Size-chart-1-e1559209680920.jpg" alt="" class="product-description__size-img">
-                </div>
-                <div class="product-description">
-                    <h3 class="product-description__name">QUY ĐỊNH ĐỔI SẢN PHẨM </h3>
-                    <ul class="product-policy-list">
-                        <li class="product-policy-item">Chỉ đổi hàng 1 lần duy nhất, mong bạn cân nhắc kĩ trước khi quyết định.</li>
-                        <li class="product-policy-item">Thời hạn đổi sản phẩm khi mua trực tiếp tại cửa hàng là 07 ngày, kể từ ngày mua. Đổi sản phẩm khi mua online là 14 ngày, kể từ ngày nhận hàng.</li>
-                        <li class="product-policy-item">Sản phẩm đổi phải kèm hóa đơn. Bắt buộc phải còn nguyên tem, hộp, nhãn mác.</li>
-                        <li class="product-policy-item">Sản phẩm đổi không có dấu hiệu đã qua sử dụng, không giặt tẩy, bám bẩn, biến dạng.</li>
-                        <li class="product-policy-item">Ananas chỉ ưu tiên hỗ trợ đổi size. Trong trường hợp sản phẩm hết size cần đổi, bạn có thể đổi sang 01 sản phẩm khác.</li>
-                        <li class="product-policy-item">Không hoàn trả bằng tiền mặt dù bất cứ trong trường hợp nào. Mong bạn thông cảm.</li>
-                    </ul>
-                </div>
             </div>
         </div>
         <footer class="footer">
