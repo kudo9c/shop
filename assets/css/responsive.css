@@ -78,6 +78,10 @@
     .nav-bars-btn-icon {
         display: block;
     }
+
+    .ship-information__header {
+        width: 100%;
+    }
 }
 
 /* Mobile */
@@ -164,6 +168,20 @@
 
     .pagination-item {
         margin: 0;
+    }
+
+    .product-suggest-wrap {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .product-suggest__img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .product-suggest-wrap {
+        width: 100%;
     }
 
     .pagination-item__link {
