@@ -180,7 +180,9 @@
         max-width: 50%;
     }
 
-    
+    .product-description__size-img {
+        width: 400px;
+    }
 
     .product-suggest-wrap {
         width: 100%;
@@ -246,6 +248,8 @@
         width: 20px;
         padding: 0 8px;
     }
+
+    
 
     .footer__content {
         padding: 0 16px;
